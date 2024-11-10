@@ -1,0 +1,175 @@
+/* Hauptfarbe und Akzentfarbe */
+:root {
+    --main-color: #297373;
+    --accent-color: #ff8552;
+}
+
+/* Light Mode */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: #EEEEEE;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings styling */
+h1, h2, h3, h4, h5, h6 {
+    color: #444;
+    line-height: 1.2;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Paragraph styling */
+p {
+    margin: 0 0 1em;
+}
+
+/* Additional utility classes for spacing, if needed */
+.mb-2 {
+    margin-bottom: 0.5em;
+}
+
+.mb-3 {
+    margin-bottom: 1em;
+}
+
+.mt-2 {
+    margin-top: 0.5em;
+}
+
+.mt-3 {
+    margin-top: 1em;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--main-color);
+}
+
+.navbar-brand,
+.nav-link {
+    color: #ffffff !important;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--main-color);
+    color: #f8f9fa;
+    padding: 15px 0;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--accent-color);
+}
+
+.footer .list-inline-item {
+    margin: 0 10px;
+}
+
+/* Box-Design */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border-radius: 8px;
+    background-color: var(--main-color);
+    color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0.2em 0.5em;
+    background-color: transparent;
+    transition: color 0.3s ease;
+}
+
+.box:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.box-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.box-link h2 {
+    text-decoration: none;
+}
+
+/* Anpassung der Bootstrap-Buttons und -Links */
+.btn,
+.navbar-brand,
+.nav-link,
+.footer a {
+    color: #ffffff;
+    background-color: var(--main-color);
+    border: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover,
+.navbar-brand:hover,
+.nav-link:hover,
+.footer a:hover {
+    color: var(--accent-color);
+    background-color: transparent;
+}
+
+/* Dark Mode Toggle Button Anpassung */
+#dark-mode-toggle {
+    background-color: var(--main-color);
+    color: #ffffff;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    color: var(--accent-color);
+    background-color: transparent;
+}
+
+/* Google Maps */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    /* Optionaler Abstand oben und unten */
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 800px;
+    /* Maximale Breite der Karte */
+    height: 450px;
+    border: 0;
+    border-radius: 8px;
+    /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Schatteneffekt */
+}
