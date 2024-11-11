@@ -193,6 +193,20 @@ p {
     /* Weiß für die Textfarbe in der dunklen Navbar */
 }
 
+/* Abgerundete Ecken für die Navbar unten */
+.custom-navbar {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Abgerundete Ecken für den Footer oben */
+.custom-footer {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px;
+    margin-top: 30px; /* Platz über dem Footer */
+}
+
 /* Keyframes für Fade-In und Slide-Up */
 @keyframes fadeInSlideUp {
     0% {

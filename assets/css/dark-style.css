@@ -199,6 +199,7 @@ p {
     padding: 20px;
     margin-top: 30px; /* Platz über dem Footer */
 }
+
 /* Keyframes für Fade-In und Slide-Up */
 @keyframes fadeInSlideUp {
     0% {
