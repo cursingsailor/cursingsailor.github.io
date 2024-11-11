@@ -43,3 +43,21 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('dark-mode', 'disabled');
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const weatherInfo = document.getElementById('weather-info');
+
+    async function fetchWeather() {
+        try {
+            const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=48.2082&longitude=16.3738&current_weather=true');
+            const data = await response.json();
+            const temp = Math.round(data.current_weather.temperature); // Aktuelle Temperatur auf ganze Zahl runden
+            weatherInfo.innerText = `${temp}°C`;
+        } catch (error) {
+            console.error('Wetterdaten konnten nicht geladen werden:', error);
+            weatherInfo.innerText = 'Wetterdaten nicht verfügbar';
+        }
+    }
+
+    fetchWeather();
+});

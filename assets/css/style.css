@@ -13,6 +13,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    padding-top: 56px;
 }
 
 /* Headings styling */
@@ -172,4 +173,10 @@ p {
     /* Abgerundete Ecken */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* Schatteneffekt */
+}
+
+/* Weather */
+#weather-info {
+    font-size: 1rem;
+    color: #ffffff; /* Weiß für die Textfarbe in der dunklen Navbar */
 }
