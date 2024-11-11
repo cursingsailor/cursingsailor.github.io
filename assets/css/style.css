@@ -1,7 +1,7 @@
 /* Hauptfarbe und Akzentfarbe */
 :root {
-    --main-color: #297373;
-    --accent-color: #ff8552;
+    --main-color: #2e4755;
+    --accent-color: #ff6b6b;
 }
 
 /* Light Mode */
@@ -119,6 +119,7 @@ p {
 
 .box-link h2 {
     text-decoration: none;
+    color: #EEEEEE;
 }
 
 /* Anpassung der Bootstrap-Buttons und -Links */
