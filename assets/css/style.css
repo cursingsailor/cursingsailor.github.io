@@ -13,11 +13,16 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    padding-top: 56px;
+    padding-top: 60px;
 }
 
 /* Headings styling */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #444;
     line-height: 1.2;
     margin-top: 1em;
@@ -88,7 +93,9 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    width: 100%;
+    /* Box passt sich an die Spaltenbreite an */
+    height: 150px;
     border-radius: 8px;
     background-color: var(--main-color);
     color: #ffffff;
@@ -98,7 +105,7 @@ p {
 }
 
 .box h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     margin: 0;
     padding: 0.2em 0.5em;
@@ -106,12 +113,14 @@ p {
     transition: color 0.3s ease;
 }
 
+/* Hover-Effekt */
 .box:hover {
     background-color: var(--accent-color);
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Link-Styling */
 .box-link {
     text-decoration: none;
     color: inherit;
@@ -121,6 +130,7 @@ p {
     text-decoration: none;
     color: #EEEEEE;
 }
+
 
 /* Anpassung der Bootstrap-Buttons und -Links */
 .btn,
@@ -179,5 +189,57 @@ p {
 /* Weather */
 #weather-info {
     font-size: 1rem;
-    color: #ffffff; /* Weiß für die Textfarbe in der dunklen Navbar */
+    color: #ffffff;
+    /* Weiß für die Textfarbe in der dunklen Navbar */
+}
+
+/* Keyframes für Fade-In und Slide-Up */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Abgerundete Box mit Schatten und Animation */
+.text-section {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    /* Hintergrundverlauf */
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    /* Startzustand für die Animation */
+    animation: fadeInSlideUp 0.8s ease forwards;
+    /* Animation */
+    transition: transform 0.3s ease;
+}
+
+/* Hover-Effekt mit leichter Vergrößerung */
+.text-section:hover {
+    transform: scale(1.02);
+    /* Vergrößert die Sektion leicht beim Hover */
+}
+
+/* Stil für Überschrift */
+.text-section h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #2b2d42;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Stil für Text */
+.text-section p {
+    color: #4a4e69;
+    line-height: 1.6;
+}
+
+.content-section {
+    transition: opacity 0.5s ease; /* Sanfter Übergang für das Ausblenden */
 }

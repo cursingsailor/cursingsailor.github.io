@@ -61,3 +61,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fetchWeather();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const textSection = document.querySelector('.text-section');
+    
+    textSection.addEventListener('mousemove', (event) => {
+        const { offsetX, offsetY } = event; // Position der Maus relativ zur Sektion
+        const width = textSection.offsetWidth;
+        const height = textSection.offsetHeight;
+
+        // Berechnung der Position für den Farbverlauf
+        const xPercent = (offsetX / width) * 100;
+        const yPercent = (offsetY / height) * 100;
+
+        // Aktualisieren des Hintergrundverlaufs basierend auf der Mausposition
+        textSection.style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%, #f0f4f8, #d9e2ec)`;
+    });
+
+    // Hintergrund zurücksetzen, wenn Maus die Sektion verlässt
+    textSection.addEventListener('mouseleave', () => {
+        textSection.style.background = 'linear-gradient(135deg, #f0f4f8, #d9e2ec)';
+    });
+});
+
+window.addEventListener('scroll', function () {
+    const content = document.querySelector('.content-section');
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    // Berechne die Opazität basierend auf der Scrollposition
+    const opacity = Math.max(1 - scrollPosition / windowHeight, 0);
+    content.style.opacity = opacity;
+});
